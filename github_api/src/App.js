@@ -1,13 +1,21 @@
 import './App.css';
 import Header from './Components/Header';
 import Landingpage from './Pages/Landingpage';
-import './chubbo.css'
+import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
+import Portfolio from './Pages/Portfolio'
 
 function App() {
   return (
     <div className="bg-[url('./Assets/background.png')] bg-no-repeat h-screen bg-cover w-screen">
-      <Landingpage />
+       <Router>
+       <Header /> 
+      <Routes>
+          <Route path='/' element={ <Landingpage />} />
+          <Route path='/Portfolio' element={ <Portfolio />} />
+      </Routes>
+    </Router>
     </div>
+   
   );
 }
 
