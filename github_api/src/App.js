@@ -3,6 +3,7 @@ import Header from './Components/Header';
 import Landingpage from './Pages/Landingpage';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Portfolio from './Pages/Portfolio'
+import Error from './Pages/Error';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
        <Router>
        <Header /> 
       <Routes>
+          <Route path='*' element={ <Error />} />
           <Route path='/' element={ <Landingpage />} />
           <Route path='/Portfolio' element={ <Portfolio />} />
       </Routes>
