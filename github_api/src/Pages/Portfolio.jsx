@@ -3,11 +3,11 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import Pagination from '../Components/Pagination';
 import axios from "axios";
-const Portfolio = () => {
+const Portfolio = ({totalRepos}) => {
 const [userData, setData] = useState([])
 const [loading, setLoading] = useState(false)
 const [currentPage, setCurrentPage] = useState(1);
-const [reposPerPage, setReposPerPage] = useState(5);
+const [reposPerPage] = useState(5);
 
   useEffect(() => {
     const getData = async() => {
@@ -24,6 +24,9 @@ const [reposPerPage, setReposPerPage] = useState(5);
   const indexOfFirstRepo = indexOfLastRepo - reposPerPage;
   const currentRepos = userData.slice(indexOfFirstRepo, indexOfLastRepo);
 
+  //change page
+  const paginate = pageNumber => setCurrentPage(pageNumber)
+
   return (
     <div className='text-white flex flex-col justify-center items-center'>
       {
@@ -33,7 +36,12 @@ const [reposPerPage, setReposPerPage] = useState(5);
           </div>
         ])
       }
-      <Pagination reposPerPage={reposPerPage} totalRepos={userData.length} />
+      <div className='flex gap-[10px]git '>
+        {currentPage !== 1 && <button onClick={() => setCurrentPage(currentPage - 1)} className='fill'> prev</button>}
+        <Pagination reposPerPage={reposPerPage} totalRepos={userData.length} paginate={paginate}  />
+        {currentPage !== Math.ceil(totalRepos/reposPerPage) && <button onClick={() => setCurrentPage(currentPage + 1)} className='fill'> next</button>}
+      </div>
+      
     </div>
   )
 }
