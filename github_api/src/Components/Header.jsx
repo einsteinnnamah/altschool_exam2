@@ -18,7 +18,7 @@ const Header = () => {
         </div>
         <div> 
           <NavLink ClassName='active' className='hover:font-[600] hover:text-[#5E3EEB] transition-[2s]' to="/Portfolio">
-          Portfolio
+          Repo
           </NavLink >
         </div>
         </nav>

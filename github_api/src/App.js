@@ -7,7 +7,7 @@ import Error from './Pages/Error';
 
 function App() {
   return (
-    <div className="bg-[url('./Assets/background.png')] bg-no-repeat h-screen bg-cover w-screen">
+    <div className="bg-[url('./Assets/background.png')] bg-no-repeat h-cover bg-cover w-screen">
        <Router>
        <Header /> 
       <Routes>
