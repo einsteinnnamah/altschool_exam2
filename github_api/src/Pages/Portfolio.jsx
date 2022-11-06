@@ -29,11 +29,11 @@ const [reposPerPage] = useState(5);
   const paginate = pageNumber => setCurrentPage(pageNumber)
 
   return (
-    <div className='text-white flex flex-col justify-center items-center'>
+    <div className='text-white flex flex-col h-screen justify-center items-center'>
       {
         currentRepos?.map(({name,id}) => [
           <div className='flex flex-col' key={id}>
-            <Link to={`Repoinfo/${name}`}  >
+            <Link to={`repo-info/${name}`}  >
               
               <div className='text-white cursor-pointer bg-[#5E3EEB]  my-5 w-[300px] md:w-[500px] rounded-[5px] p-5'>
               <p className='text-black font-[600] text-[18px]'>Repo Name</p>
@@ -46,9 +46,9 @@ const [reposPerPage] = useState(5);
         ])
       }
       <div className='flex gap-[10px] my-5  '>
-        {currentPage !== 1 && <button onClick={() => setCurrentPage(currentPage - 1)} className='bg-[#a992f1]  text-white px-5 rounded-[5px] hover:bg-[#5E3EEB] '> prev</button>}
+        {currentPage !== 1 && <button onClick={() => setCurrentPage(currentPage - 1)} className='bg-[#a992f1]  text-white px-2 md:px-5 rounded-[5px] hover:bg-[#5E3EEB] '> prev</button>}
         <Pagination reposPerPage={reposPerPage} totalRepos={userData.length} paginate={paginate}  />
-        {currentPage !== Math.ceil(totalRepos/reposPerPage) && <button onClick={() => setCurrentPage(currentPage + 1)} className='bg-[#a992f1]  text-white px-5 rounded-[5px] hover:bg-[#5E3EEB]'> next</button>}
+        {currentPage !== Math.ceil(totalRepos/reposPerPage) && <button onClick={() => setCurrentPage(currentPage + 1)} className='bg-[#a992f1]  text-white px-2 md:px-5 rounded-[5px] hover:bg-[#5E3EEB]'> next</button>}
       </div>
       
     </div>

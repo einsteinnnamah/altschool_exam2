@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../Components/Header'
 
-const Landingpage = () => {
+const LandingPage = () => {
   return (
     <div className='text-white'> 
       <div  className='lg:text-[50px] text-[30px] md:text-[40px] items-center flex flex-col text-center justify-center font-bold mt-20 '>
@@ -13,4 +13,4 @@ const Landingpage = () => {
   )
 }
 
-export default Landingpage
+export default LandingPage

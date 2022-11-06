@@ -1,25 +1,24 @@
 import './App.css';
 import Header from './Components/Header';
-import Landingpage from './Pages/Landingpage';
+import LandingPage from './Pages/LandingPage';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Portfolio from './Pages/Portfolio'
 import Error from './Pages/Error';
-import Repoinfo from './Pages/Repoinfo';
+import RepoInfo from './Pages/RepoInfo';
 
 function App() {
   return (
-    <div className="bg-[url('./Assets/background.png')] bg-no-repeat h-cover bg-cover w-screen">
+    <div className="bg-[url('./Assets/background.png')] bg-no-repeat bg-cover h-screen w-screen">
        <Router>
        <Header /> 
       <Routes>
           <Route path='*' element={ <Error />} />
-          <Route path='/' element={ <Landingpage />} />
+          <Route path='/' element={ <LandingPage />} />
           <Route path='/Portfolio' element={ <Portfolio />} />
-          <Route path='Portfolio/Repoinfo/:id' element={ <Repoinfo />} />
+          <Route path='Portfolio/repo-info/:name' element={ <RepoInfo />} />
       </Routes>
     </Router>
     </div>
-   
   );
 }
 
