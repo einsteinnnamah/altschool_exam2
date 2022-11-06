@@ -8,10 +8,10 @@ const Pagination = ({reposPerPage, totalRepos, paginate, setCurrentPage, current
     }
   return (
     <nav>
-        <div className="text-white flex gap-10">
+        <div className="text-white flex gap-1">
        
             {pageNumbers.map((number, index) => {
-                return <div key={number} className='text-white bg-red-900 px-5 py-2'>
+                return <div key={number} className='text-white border-[2px] border-[#5E3EEB] rounded-[5px] px-5 py-2'>
                     <a onClick={() => paginate(number)} href="#" className='text-white active'>
                         {number}
                     </a>

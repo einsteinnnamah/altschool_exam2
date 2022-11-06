@@ -4,6 +4,7 @@ import Landingpage from './Pages/Landingpage';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Portfolio from './Pages/Portfolio'
 import Error from './Pages/Error';
+import Repoinfo from './Pages/Repoinfo';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path='*' element={ <Error />} />
           <Route path='/' element={ <Landingpage />} />
           <Route path='/Portfolio' element={ <Portfolio />} />
+          <Route path='Portfolio/Repoinfo/:id' element={ <Repoinfo />} />
       </Routes>
     </Router>
     </div>
