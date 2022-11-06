@@ -31,14 +31,14 @@ const [reposPerPage] = useState(5);
   return (
     <div className='text-white flex flex-col justify-center items-center'>
       {
-        currentRepos?.map((yourData, i) => [
-          <div className='flex flex-col' key={yourData.id}>
-            <Link to={`Repoinfo/${yourData.name}`} >
+        currentRepos?.map(({name,id}) => [
+          <div className='flex flex-col' key={id}>
+            <Link to={`Repoinfo/${name}`}  >
               
               <div className='text-white cursor-pointer bg-[#5E3EEB]  my-5 w-[300px] md:w-[500px] rounded-[5px] p-5'>
               <p className='text-black font-[600] text-[18px]'>Repo Name</p>
               <div>
-                {yourData.name}
+                {name}
               </div>
               </div>
             </Link>
