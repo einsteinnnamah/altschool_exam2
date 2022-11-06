@@ -3,7 +3,7 @@ import Header from '../Components/Header'
 
 const LandingPage = () => {
   return (
-    <div className='text-white'> 
+    <div className='text-white h-screen'> 
       <div  className='lg:text-[50px] text-[30px] md:text-[40px] items-center flex flex-col text-center justify-center font-bold mt-20 '>
         Using Github Api to fetch  
         <br />

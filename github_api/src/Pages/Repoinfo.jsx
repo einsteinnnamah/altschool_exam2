@@ -18,7 +18,7 @@ const [newResult, setNewResult] = useState(null)
     })
     
   return (
-    <div className='text-white flex justify-center'>
+    <div className='text-white flex h-screen items-center justify-center'>
     {
         newResult?(
             <div className='cursor-pointer bg-[#5E3EEB]  my-5 w-[300px] md:w-[500px] rounded-[5px] p-5'>

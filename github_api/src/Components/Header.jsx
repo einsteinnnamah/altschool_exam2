@@ -17,7 +17,7 @@ const Header = () => {
           </NavLink >
         </div>
         <div> 
-          <NavLink ClassName='active' className='hover:font-[600] hover:text-[#5E3EEB] transition-[2s]' to="/Portfolio">
+          <NavLink ClassName='active' className='hover:font-[600] hover:text-[#5E3EEB] transition-[2s]' to="/Repo">
           Repo
           </NavLink >
         </div>
