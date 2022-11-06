@@ -26,9 +26,10 @@ const [newResult, setNewResult] = useState(null)
                <div className='flex justify-between'> {newResult.name} <p className='text-black'> Forks: {newResult.forks}</p></div>
                <p className='text-black font-[600] text-[18px] pt-5'>Repo id</p>
                <div className='flex justify-between'> {newResult.id}  <p className='text-black'> Forks: {newResult.visibility}</p></div>
+                <div className='text-black mt-5'><a href={newResult.html_url} target='_blank'>Click to view Repo</a></div>
             </div>
         ):(
-            <div>Repo Not Found</div>
+            <div>Loading...</div>
         )
     }
     </div>
