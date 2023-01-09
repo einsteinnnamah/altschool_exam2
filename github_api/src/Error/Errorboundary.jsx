@@ -30,7 +30,7 @@ class ErrorBoundary extends React.Component {
                       Contact our Support @altchoolafrica on twitter so we can help you out.
                     </h2>
                 </div>
-                </div>;
+                </div>
       }
   
       return this.props.children; 

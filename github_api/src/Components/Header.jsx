@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom'
 import ent from '../Assets/ent.png'
 const Header = () => {
   return (
-    <div className='text-white p-5'>
+    <div className='text-white p-5 xl:w-[1440px] xl:m-auto lg:mx-10'>
        <div className=' flex mx-auto items-center justify-between'>
         <div className='flex gap-[10px] items-center'>
             <img src={ent} className=" w-5 md:w-10" />

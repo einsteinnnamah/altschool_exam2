@@ -29,13 +29,13 @@ const [reposPerPage] = useState(4);
   const paginate = pageNumber => setCurrentPage(pageNumber)
 
   return (
-    <div className='text-white flex flex-col justify-center items-center'>
+    <div className='text-white flex flex-col justify-center mt-10 items-center'>
       {
         currentRepos?.map(({name,id}) => [
           <div className='flex' key={id}>
-            <Link to={`repo-info/${name}`}  >
+            <Link to={`repo-info/${name}`} >
               
-              <div className='text-white cursor-pointer bg-[#5E3EEB]   my-5 w-[300px] md:w-[500px] rounded-[5px] p-5'>
+              <div className='text-white cursor-pointer bg-[#5E3EEB] my-5 w-[300px] md:w-[500px] rounded-[5px] p-5'>
               <p className='text-black font-[600] text-[18px]'>Repo Name</p>
               <div className=''>
                 {name}

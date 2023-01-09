@@ -8,7 +8,7 @@ import RepoInfo from './Pages/RepoInfo';
 
 function App() {
   return (
-    <div className="bg-[url('./Assets/background.png')] bg-no-repeat bg-cover  ">
+    <div className="bg-[url('./Assets/background.png')] bg-no-repeat bg-cover h-screen  ">
        <Router>
        <Header /> 
       <Routes>
